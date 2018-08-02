@@ -1,0 +1,480 @@
+# $Id: proton.mac 26-1-2018 pasenov
+#
+# macro file for PhaseII.cc
+#
+/control/verbose 2
+/run/verbose 2
+#
+/testem/det/setMatD Silicon
+/testem/det/setSizeZ1 320 um
+/testem/det/setSizeZ2 320 um
+#
+/run/setCut 1 um
+#
+#/process/eLoss/CSDARange true
+#
+/run/initialize
+#
+/gun/particle proton 
+/gun/energy 25 MeV
+#
+/analysis/setFileName proton
+# 
+/analysis/h1/set 1 400 0 4 MeV    #continuous eLoss for Sensor 1
+/analysis/h1/set 2 400 0 4 MeV    #continuous eLoss for Sensor 2
+/analysis/h1/set 3 400 0 4 MeV   #secondary  eLoss for Sensor 1
+/analysis/h1/set 4 400 0 4 MeV   #secondary  eLoss for Sensor 2
+/analysis/h1/set 5 1000 0 100 keV   #tertiary  eLoss for Sensor 1
+/analysis/h1/set 6 1000 0 100 keV   #tertiary  eLoss for Sensor 2
+/analysis/h1/set 7 400 0 4 MeV    #total eLoss for Sensor 1
+/analysis/h1/set 8 400 0 4 MeV    #total eLoss for Sensor 2
+/analysis/h1/set 9 10000 0 100 keV    #secondary e- energy spectrum for Sensor 1
+/analysis/h1/set 10 10000 0 100 keV    #secondary e- energy spectrum for Sensor 2
+/analysis/h1/set 11 10000 0 100 keV    #secondary gamma energy spectrum for Sensor 1
+/analysis/h1/set 12 10000 0 100 keV   #secondary gamma energy spectrum for Sensor 2
+/analysis/h1/set 13 1000 0 100 keV   #tertiary e- energy spectrum for Sensor 1
+/analysis/h1/set 14 1000 0 100 keV   #tertiary e- energy spectrum for Sensor 2
+/analysis/h1/set 15 1000 0 100 keV   #tertiary gamma energy spectrum for Sensor 1
+/analysis/h1/set 16 1000 0 100 keV   #tertiary gamma energy spectrum for Sensor 2
+/analysis/h1/set 17 1000 0 0.05 mm	    #step size for primary
+/analysis/h1/set 18 1000 0 0.02 mm    #step size for secondaries
+/analysis/h1/set 19 1000 0 0.02 mm    #step size for tertiaries
+/analysis/h1/set 20 1000 0 0.02 mm    #step size for secondaries created in sensors
+/analysis/h1/set 21 100 -1.5 1.5    #x-polarization for secondaries
+/analysis/h1/set 22 100 -1.5 1.5    #y-polarization for secondaries
+/analysis/h1/set 23 100 -1.5 1.5    #z-polarization for secondaries
+/analysis/h1/set 24 100 -1.5 1.5    #x-polarization for tertiaries
+/analysis/h1/set 25 100 -1.5 1.5    #y-polarization for tertiaries
+/analysis/h1/set 26 100 -1.5 1.5    #z-polarization for tertiaries
+/analysis/h1/set 27 100 0 15 cm	    #track length for primary
+/analysis/h1/set 28 100 0 15 mm    #total track length of secondaries
+/analysis/h1/set 29 100 0 3 mm     #total track length of tertiaries
+/analysis/h1/set 30 100 0 10 mm    #total track length of secondaries created in sensors
+/analysis/h1/set 31 100 0 0.1 mm    #track length of secondaries created in sensors
+/analysis/h1/set 32 100 0 100000    #number of positrons created in Sensor 1
+/analysis/h1/set 33 100 0 100000    #number of positrons created in Sensor 2
+/analysis/h1/set 34 100 0 100000    #number of electrons created in Sensor 1
+/analysis/h1/set 35 100 0 100000    #number of electrons created in Sensor 1
+/analysis/h1/set 36 100 0 100000    #number of pi+ created in Sensor 1
+/analysis/h1/set 37 100 0 100000    #number of pi+ created in Sensor 2
+/analysis/h1/set 38 100 0 100000    #number of pi- created in Sensor 1
+/analysis/h1/set 39 100 0 100000    #number of pi- created in Sensor 2
+/analysis/h1/set 40 100 0 100000    #number of mu+ created in Sensor 1
+/analysis/h1/set 41 100 0 100000    #number of mu+ created in Sensor 2
+/analysis/h1/set 42 100 0 100000    #number of mu- created in Sensor 1
+/analysis/h1/set 43 100 0 100000    #number of mu- created in Sensor 2
+/analysis/h1/set 44 100 0 100000    #number of delta e- created in Sensor 1 that have reached Sensor 2
+/analysis/h1/set 45 100 0 100000    #number of delta e- created in Sensor 2 that have reached Sensor 1
+/analysis/h1/set 46 100 0 100000    #number of positrons created before Sensor 1
+/analysis/h1/set 47 100 0 100000    #number of electrons created before Sensor 1
+/analysis/h1/set 48 100 0 100000    #number of positrons created between Sensor 1 and Sensor 2
+/analysis/h1/set 49 100 0 100000    #number of electrons created between Sensor 1 and Sensor 2
+/analysis/h1/set 50 100 0 100000    #number of positrons created after Sensor 2
+/analysis/h1/set 51 100 0 100000    #number of electrons created after Sensor 2
+
+/analysis/h1/set 52 1000 0 4 MeV    #continuous eLoss for strip a 505 Sensor 1
+/analysis/h1/setXaxis 52 "continuous eLoss for strip a 505 Sensor 1"
+/analysis/h1/setYaxis 52 "number of entries per bin"
+/analysis/h1/set 53 1000 0 4 MeV    #continuous eLoss for strip a 506 Sensor 1
+/analysis/h1/setXaxis 53 "continuous eLoss for strip a 506 Sensor 1"
+/analysis/h1/setYaxis 53 "number of entries per bin"
+/analysis/h1/set 54 1000 0 4 MeV    #continuous eLoss for strip a 507 Sensor 1
+/analysis/h1/setXaxis 54 "continuous eLoss for strip a 507 Sensor 1"
+/analysis/h1/setYaxis 54 "number of entries per bin"
+/analysis/h1/set 55 1000 0 4 MeV    #continuous eLoss for strip a 508 Sensor 1
+/analysis/h1/setXaxis 55 "continuous eLoss for strip a 508 Sensor 1"
+/analysis/h1/setYaxis 55 "number of entries per bin"
+/analysis/h1/set 56 1000 0 4 MeV    #continuous eLoss for strip a 509 Sensor 1
+/analysis/h1/setXaxis 56 "continuous eLoss for strip a 509 Sensor 1"
+/analysis/h1/setYaxis 56 "number of entries per bin"
+/analysis/h1/set 57 1000 0 4 MeV    #continuous eLoss for strip a 510 Sensor 1
+/analysis/h1/setXaxis 57 "continuous eLoss for strip a 510 Sensor 1"
+/analysis/h1/setYaxis 57 "number of entries per bin"
+/analysis/h1/set 58 1000 0 4 MeV    #continuous eLoss for strip a 511 Sensor 1
+/analysis/h1/setXaxis 58 "continuous eLoss for strip a 511 Sensor 1"
+/analysis/h1/setYaxis 58 "number of entries per bin"
+/analysis/h1/set 59 1000 0 4 MeV    #continuous eLoss for strip a 512 Sensor 1
+/analysis/h1/setXaxis 59 "continuous eLoss for strip a 512 Sensor 1"
+/analysis/h1/setYaxis 59 "number of entries per bin"
+/analysis/h1/set 60 1000 0 4 MeV    #continuous eLoss for strip b 505 Sensor 1
+/analysis/h1/setXaxis 60 "continuous eLoss for strip b 505 Sensor 1"
+/analysis/h1/setYaxis 60 "number of entries per bin"
+/analysis/h1/set 61 1000 0 4 MeV    #continuous eLoss for strip b 506 Sensor 1
+/analysis/h1/setXaxis 61 "continuous eLoss for strip b 506 Sensor 1"
+/analysis/h1/setYaxis 61 "number of entries per bin"
+/analysis/h1/set 62 1000 0 4 MeV    #continuous eLoss for strip b 507 Sensor 1
+/analysis/h1/setXaxis 62 "continuous eLoss for strip b 507 Sensor 1"
+/analysis/h1/setYaxis 62 "number of entries per bin"
+/analysis/h1/set 63 1000 0 4 MeV    #continuous eLoss for strip b 508 Sensor 1
+/analysis/h1/setXaxis 63 "continuous eLoss for strip b 508 Sensor 1"
+/analysis/h1/setYaxis 63 "number of entries per bin"
+/analysis/h1/set 64 1000 0 4 MeV    #continuous eLoss for strip b 509 Sensor 1
+/analysis/h1/setXaxis 64 "continuous eLoss for strip b 509 Sensor 1"
+/analysis/h1/setYaxis 64 "number of entries per bin"
+/analysis/h1/set 65 1000 0 4 MeV    #continuous eLoss for strip b 510 Sensor 1
+/analysis/h1/setXaxis 65 "continuous eLoss for strip b 510 Sensor 1"
+/analysis/h1/setYaxis 65 "number of entries per bin"
+/analysis/h1/set 66 1000 0 4 MeV    #continuous eLoss for strip b 511 Sensor 1
+/analysis/h1/setXaxis 66 "continuous eLoss for strip b 511 Sensor 1"
+/analysis/h1/setYaxis 66 "number of entries per bin"
+/analysis/h1/set 67 1000 0 4 MeV    #continuous eLoss for strip b 512 Sensor 1
+/analysis/h1/setXaxis 67 "continuous eLoss for strip b 512 Sensor 1"
+/analysis/h1/setYaxis 67 "number of entries per bin"
+/analysis/h1/set 68 1000 0 4 MeV    #continuous eLoss for strip a 505 Sensor 2
+/analysis/h1/setXaxis 68 "continuous eLoss for strip a 505 Sensor 2"
+/analysis/h1/setYaxis 68 "number of entries per bin"
+/analysis/h1/set 69 1000 0 4 MeV    #continuous eLoss for strip a 506 Sensor 2
+/analysis/h1/setXaxis 69 "continuous eLoss for strip a 506 Sensor 2"
+/analysis/h1/setYaxis 69 "number of entries per bin"
+/analysis/h1/set 70 1000 0 4 MeV    #continuous eLoss for strip a 507 Sensor 2
+/analysis/h1/setXaxis 70 "continuous eLoss for strip a 507 Sensor 2"
+/analysis/h1/setYaxis 70 "number of entries per bin"
+/analysis/h1/set 71 1000 0 4 MeV    #continuous eLoss for strip a 508 Sensor 2
+/analysis/h1/setXaxis 71 "continuous eLoss for strip a 508 Sensor 2"
+/analysis/h1/setYaxis 71 "number of entries per bin"
+/analysis/h1/set 72 1000 0 4 MeV    #continuous eLoss for strip a 509 Sensor 2
+/analysis/h1/setXaxis 72 "continuous eLoss for strip a 509 Sensor 2"
+/analysis/h1/setYaxis 72 "number of entries per bin"
+/analysis/h1/set 73 1000 0 4 MeV    #continuous eLoss for strip a 510 Sensor 2
+/analysis/h1/setXaxis 73 "continuous eLoss for strip a 510 Sensor 2"
+/analysis/h1/setYaxis 73 "number of entries per bin"
+/analysis/h1/set 74 1000 0 4 MeV    #continuous eLoss for strip a 511 Sensor 2
+/analysis/h1/setXaxis 74 "continuous eLoss for strip a 511 Sensor 2"
+/analysis/h1/setYaxis 74 "number of entries per bin"
+/analysis/h1/set 75 1000 0 4 MeV    #continuous eLoss for strip a 512 Sensor 2
+/analysis/h1/setXaxis 75 "continuous eLoss for strip a 512 Sensor 2"
+/analysis/h1/setYaxis 75 "number of entries per bin"
+/analysis/h1/set 76 1000 0 4 MeV    #continuous eLoss for strip b 505 Sensor 2
+/analysis/h1/setXaxis 76 "continuous eLoss for strip b 505 Sensor 2"
+/analysis/h1/setYaxis 76 "number of entries per bin"
+/analysis/h1/set 77 1000 0 4 MeV    #continuous eLoss for strip b 506 Sensor 2
+/analysis/h1/setXaxis 77 "continuous eLoss for strip b 506 Sensor 2"
+/analysis/h1/setYaxis 77 "number of entries per bin"
+/analysis/h1/set 78 1000 0 4 MeV    #continuous eLoss for strip b 507 Sensor 2
+/analysis/h1/setXaxis 78 "continuous eLoss for strip b 507 Sensor 2"
+/analysis/h1/setYaxis 78 "number of entries per bin"
+/analysis/h1/set 79 1000 0 4 MeV    #continuous eLoss for strip b 508 Sensor 2
+/analysis/h1/setXaxis 79 "continuous eLoss for strip b 508 Sensor 2"
+/analysis/h1/setYaxis 79 "number of entries per bin"
+/analysis/h1/set 80 1000 0 4 MeV    #continuous eLoss for strip b 509 Sensor 2
+/analysis/h1/setXaxis 80 "continuous eLoss for strip b 509 Sensor 2"
+/analysis/h1/setYaxis 80 "number of entries per bin"
+/analysis/h1/set 81 1000 0 4 MeV    #continuous eLoss for strip b 510 Sensor 2
+/analysis/h1/setXaxis 81 "continuous eLoss for strip b 510 Sensor 2"
+/analysis/h1/setYaxis 81 "number of entries per bin"
+/analysis/h1/set 82 1000 0 4 MeV    #continuous eLoss for strip b 511 Sensor 2
+/analysis/h1/setXaxis 82 "continuous eLoss for strip b 511 Sensor 2"
+/analysis/h1/setYaxis 82 "number of entries per bin"
+/analysis/h1/set 83 1000 0 4 MeV    #continuous eLoss for strip b 512 Sensor 2
+/analysis/h1/setXaxis 83 "continuous eLoss for strip b 512 Sensor 2"
+/analysis/h1/setYaxis 83 "number of entries per bin"
+
+/analysis/h1/set 84 1000 0 100000    #number of electrons created in strip a 505 Sensor 1
+/analysis/h1/set 85 1000 0 100000    #number of electrons created in strip a 506 Sensor 1
+/analysis/h1/set 86 1000 0 100000    #number of electrons created in strip a 507 Sensor 1
+/analysis/h1/set 87 1000 0 100000    #number of electrons created in strip a 508 Sensor 1
+/analysis/h1/set 88 1000 0 100000    #number of electrons created in strip a 509 Sensor 1
+/analysis/h1/set 89 1000 0 100000    #number of electrons created in strip a 510 Sensor 1
+/analysis/h1/set 90 1000 0 100000    #number of electrons created in strip a 511 Sensor 1
+/analysis/h1/set 91 1000 0 100000    #number of electrons created in strip a 512 Sensor 1
+/analysis/h1/set 92 1000 0 100000    #number of electrons created in strip b 505 Sensor 1
+/analysis/h1/set 93 1000 0 100000    #number of electrons created in strip b 506 Sensor 1
+/analysis/h1/set 94 1000 0 100000    #number of electrons created in strip b 507 Sensor 1
+/analysis/h1/set 95 1000 0 100000    #number of electrons created in strip b 508 Sensor 1
+/analysis/h1/set 96 1000 0 100000    #number of electrons created in strip b 509 Sensor 1
+/analysis/h1/set 97 1000 0 100000    #number of electrons created in strip b 510 Sensor 1
+/analysis/h1/set 98 1000 0 100000    #number of electrons created in strip b 511 Sensor 1
+/analysis/h1/set 99 1000 0 100000    #number of electrons created in strip b 512 Sensor 1
+/analysis/h1/set 100 1000 0 100000    #number of electrons created in strip a 505 Sensor 2
+/analysis/h1/set 101 1000 0 100000    #number of electrons created in strip a 506 Sensor 2
+/analysis/h1/set 102 1000 0 100000    #number of electrons created in strip a 507 Sensor 2
+/analysis/h1/set 103 1000 0 100000    #number of electrons created in strip a 508 Sensor 2
+/analysis/h1/set 104 1000 0 100000    #number of electrons created in strip a 509 Sensor 2
+/analysis/h1/set 105 1000 0 100000    #number of electrons created in strip a 510 Sensor 2
+/analysis/h1/set 106 1000 0 100000    #number of electrons created in strip a 511 Sensor 2
+/analysis/h1/set 107 1000 0 100000    #number of electrons created in strip a 512 Sensor 2
+/analysis/h1/set 108 1000 0 100000    #number of electrons created in strip b 505 Sensor 2
+/analysis/h1/set 109 1000 0 100000    #number of electrons created in strip b 506 Sensor 2
+/analysis/h1/set 110 1000 0 100000    #number of electrons created in strip b 507 Sensor 2
+/analysis/h1/set 111 1000 0 100000    #number of electrons created in strip b 508 Sensor 2
+/analysis/h1/set 112 1000 0 100000    #number of electrons created in strip b 509 Sensor 2
+/analysis/h1/set 113 1000 0 100000    #number of electrons created in strip b 510 Sensor 2
+/analysis/h1/set 114 1000 0 100000    #number of electrons created in strip b 511 Sensor 2
+/analysis/h1/set 115 1000 0 100000    #number of electrons created in strip b 512 Sensor 2
+
+/analysis/h1/set 116 100 0 0.2         #deflection angle of primary particle
+/analysis/h1/setXaxis 116 "deflection angle of primary particle (rad)"
+/analysis/h1/setYaxis 116 "number of entries per bin"
+/analysis/h1/set 117 100 0 500 um     #distance between midpoint of primary inside Sensor 1 and AD
+/analysis/h1/setXaxis 117 "distance between midpoint of primary inside Sensor 1 and AD (um)"
+/analysis/h1/setYaxis 117 "number of entries per bin"
+/analysis/h1/set 118 100 0 500 um     #distance between midpoint of primary inside Sensor 2 and AD
+/analysis/h1/setXaxis 118 "distance between midpoint of primary inside Sensor 2 and AD (um)"
+/analysis/h1/setYaxis 118 "number of entries per bin"
+/analysis/h1/set 119 100 -500 500 um    #2S first-plane residuals in x-direction
+/analysis/h1/setXaxis 119 "2S first-plane residuals in x-direction (um)"
+/analysis/h1/setYaxis 119 "number of entries per bin"
+/analysis/h1/set 120 100 -500 500 um    #2S first-plane residuals in y-direction
+/analysis/h1/setXaxis 120 "2S first-plane residuals in y-direction (um)"
+/analysis/h1/setYaxis 120 "number of entries per bin"
+/analysis/h1/set 121 100 -500 500 um    #2S second-plane residuals in x-direction
+/analysis/h1/setXaxis 121 "2S second-plane residuals in x-direction (um)"
+/analysis/h1/setYaxis 121 "number of entries per bin"
+/analysis/h1/set 122 100 -500 500 um    #2S second-plane residuals in y-direction
+/analysis/h1/setXaxis 122 "2S second-plane residuals in y-direction (um)"
+/analysis/h1/setYaxis 122 "number of entries per bin"
+
+/analysis/h1/set 123 100000 0 100000    #number of hits for strip a 505 Sensor 1
+/analysis/h1/setXaxis 123 "number of hits for strip a 505 Sensor 1"
+/analysis/h1/setYaxis 123 "number of entries per bin"
+/analysis/h1/set 124 100000 0 100000    #number of hits for strip a 506 Sensor 1
+/analysis/h1/setXaxis 124 "number of hits for strip a 506 Sensor 1"
+/analysis/h1/setYaxis 124 "number of entries per bin"
+/analysis/h1/set 125 100000 0 100000    #number of hits for strip a 507 Sensor 1
+/analysis/h1/setXaxis 125 "number of hits for strip a 507 Sensor 1"
+/analysis/h1/setYaxis 125 "number of entries per bin"
+/analysis/h1/set 126 100000 0 100000    #number of hits for strip a 508 Sensor 1
+/analysis/h1/setXaxis 126 "number of hits for strip a 508 Sensor 1"
+/analysis/h1/setYaxis 126 "number of entries per bin"
+/analysis/h1/set 127 100000 0 100000    #number of hits for strip a 509 Sensor 1
+/analysis/h1/setXaxis 127 "number of hits for strip a 509 Sensor 1"
+/analysis/h1/setYaxis 127 "number of entries per bin"
+/analysis/h1/set 128 100000 0 100000    #number of hits for strip a 510 Sensor 1
+/analysis/h1/setXaxis 128 "number of hits for strip a 510 Sensor 1"
+/analysis/h1/setYaxis 128 "number of entries per bin"
+/analysis/h1/set 129 100000 0 100000    #number of hits for strip a 511 Sensor 1
+/analysis/h1/setXaxis 129 "number of hits for strip a 511 Sensor 1"
+/analysis/h1/setYaxis 129 "number of entries per bin"
+/analysis/h1/set 130 100000 0 100000    #number of hits for strip a 512 Sensor 1
+/analysis/h1/setXaxis 130 "number of hits for strip a 512 Sensor 1"
+/analysis/h1/setYaxis 130 "number of entries per bin"
+/analysis/h1/set 131 100000 0 100000    #number of hits for strip b 505 Sensor 1
+/analysis/h1/setXaxis 131 "number of hits for strip b 505 Sensor 1"
+/analysis/h1/setYaxis 131 "number of entries per bin"
+/analysis/h1/set 132 100000 0 100000    #number of hits for strip b 506 Sensor 1
+/analysis/h1/setXaxis 132 "number of hits for strip b 506 Sensor 1"
+/analysis/h1/setYaxis 132 "number of entries per bin"
+/analysis/h1/set 133 100000 0 100000    #number of hits for strip b 507 Sensor 1
+/analysis/h1/setXaxis 133 "number of hits for strip b 507 Sensor 1"
+/analysis/h1/setYaxis 133 "number of entries per bin"
+/analysis/h1/set 134 100000 0 100000    #continuous eLoss for strip b 508 Sensor 1
+/analysis/h1/setXaxis 134 "continuous eLoss for strip b 508 Sensor 1"
+/analysis/h1/setYaxis 134 "number of entries per bin"
+/analysis/h1/set 135 100000 0 100000    #number of hits for strip b 509 Sensor 1
+/analysis/h1/setXaxis 135 "number of hits for strip b 509 Sensor 1"
+/analysis/h1/setYaxis 135 "number of entries per bin"
+/analysis/h1/set 136 100000 0 100000    #number of hits for strip b 510 Sensor 1
+/analysis/h1/setXaxis 136 "number of hits for strip b 510 Sensor 1"
+/analysis/h1/setYaxis 136 "number of entries per bin"
+/analysis/h1/set 137 100000 0 100000   #number of hits for strip b 511 Sensor 1
+/analysis/h1/setXaxis 137 "number of hits for strip b 511 Sensor 1"
+/analysis/h1/setYaxis 137 "number of entries per bin"
+/analysis/h1/set 138 100000 0 100000    #number of hits for strip b 512 Sensor 1
+/analysis/h1/setXaxis 138 "number of hits for strip b 512 Sensor 1"
+/analysis/h1/setYaxis 138 "number of entries per bin"
+/analysis/h1/set 139 100000 0 100000    #number of hits for strip a 505 Sensor 2
+/analysis/h1/setXaxis 139 "number of hits for strip a 505 Sensor 2"
+/analysis/h1/setYaxis 139 "number of entries per bin"
+/analysis/h1/set 140 100000 0 100000    #number of hits for strip a 506 Sensor 2
+/analysis/h1/setXaxis 140 "number of hits for strip a 506 Sensor 2"
+/analysis/h1/setYaxis 140 "number of entries per bin"
+/analysis/h1/set 141 100000 0 100000    #number of hits for strip a 507 Sensor 2
+/analysis/h1/setXaxis 141 "number of hits for strip a 507 Sensor 2"
+/analysis/h1/setYaxis 141 "number of entries per bin"
+/analysis/h1/set 142 100000 0 100000    #number of hits for strip a 508 Sensor 2
+/analysis/h1/setXaxis 142 "number of hits for strip a 508 Sensor 2"
+/analysis/h1/setYaxis 142 "number of entries per bin"
+/analysis/h1/set 143 100000 0 100000    #number of hits for strip a 509 Sensor 2
+/analysis/h1/setXaxis 143 "number of hits for strip a 509 Sensor 2"
+/analysis/h1/setYaxis 143 "number of entries per bin"
+/analysis/h1/set 144 100000 0 100000    #number of hits for strip a 510 Sensor 2
+/analysis/h1/setXaxis 144 "number of hits for strip a 510 Sensor 2"
+/analysis/h1/setYaxis 144 "number of entries per bin"
+/analysis/h1/set 145 100000 0 100000    #number of hits for strip a 511 Sensor 2
+/analysis/h1/setXaxis 145 "number of hits for strip a 511 Sensor 2"
+/analysis/h1/setYaxis 145 "number of entries per bin"
+/analysis/h1/set 146 100000 0 100000    #number of hits for strip a 512 Sensor 2
+/analysis/h1/setXaxis 146 "number of hits for strip a 512 Sensor 2"
+/analysis/h1/setYaxis 146 "number of entries per bin"
+/analysis/h1/set 147 100000 0 100000    #number of hits for strip b 505 Sensor 2
+/analysis/h1/setXaxis 147 "number of hits for strip b 505 Sensor 2"
+/analysis/h1/setYaxis 147 "number of entries per bin"
+/analysis/h1/set 148 100000 0 100000    #number of hits for strip b 506 Sensor 2
+/analysis/h1/setXaxis 148 "number of hits for strip b 506 Sensor 2"
+/analysis/h1/setYaxis 148 "number of entries per bin"
+/analysis/h1/set 149 100000 0 100000    #number of hits for strip b 507 Sensor 2
+/analysis/h1/setXaxis 149 "number of hits for strip b 507 Sensor 2"
+/analysis/h1/setYaxis 149 "number of entries per bin"
+/analysis/h1/set 150 100000 0 100000    #number of hits for strip b 508 Sensor 2
+/analysis/h1/setXaxis 150 "number of hits for strip b 508 Sensor 2"
+/analysis/h1/setYaxis 150 "number of entries per bin"
+/analysis/h1/set 151 100000 0 100000    #number of hits for strip b 509 Sensor 2
+/analysis/h1/setXaxis 151 "number of hits for strip b 509 Sensor 2"
+/analysis/h1/setYaxis 151 "number of entries per bin"
+/analysis/h1/set 152 100000 0 100000    #number of hits for strip b 510 Sensor 2
+/analysis/h1/setXaxis 152 "number of hits for strip b 510 Sensor 2"
+/analysis/h1/setYaxis 152 "number of entries per bin"
+/analysis/h1/set 153 100000 0 100000    #number of hits for strip b 511 Sensor 2
+/analysis/h1/setXaxis 153 "number of hits for strip b 511 Sensor 2"
+/analysis/h1/setYaxis 153 "number of entries per bin"
+/analysis/h1/set 154 100000 0 100000    #number of hits for strip b 512 Sensor 2
+/analysis/h1/setXaxis 154 "number of hits for strip b 512 Sensor 2"
+/analysis/h1/setYaxis 154 "number of entries per bin"
+
+/analysis/h1/set 155 1000 0 100000    #charge in Sensor 1 [e-] corresponding to the deposited energy in Sensor 1
+/analysis/h1/setXaxis 155 "charge in Sensor 1 [e-] corresponding to the deposited energy in Sensor 1"
+/analysis/h1/setYaxis 155 "number of entries per bin"
+/analysis/h1/set 156 1000 0 100000    #charge in Sensor 2 [e-] corresponding to the deposited energy in Sensor 2
+/analysis/h1/setXaxis 156 "charge in Sensor 2 [e-] corresponding to the deposited energy in Sensor 2"
+/analysis/h1/setYaxis 156 "number of entries per bin"
+
+/analysis/h1/set 157 1000 0 50000    #charge in strip a 505 Sensor 1 [e]
+/analysis/h1/setXaxis 157 "charge in strip a 505 Sensor 1 [e]"
+/analysis/h1/setYaxis 157 "number of entries per bin"
+/analysis/h1/set 158 1000 0 50000    #charge in strip a 506 Sensor 1 [e]
+/analysis/h1/setXaxis 158 "charge in strip a 506 Sensor 1 [e]"
+/analysis/h1/setYaxis 158 "number of entries per bin"
+/analysis/h1/set 159 1000 0 50000    #charge in strip a 507 Sensor 1 [e]
+/analysis/h1/setXaxis 159 "charge in strip a 507 Sensor 1 [e]"
+/analysis/h1/setYaxis 159 "number of entries per bin"
+/analysis/h1/set 160 1000 0 50000   #charge in strip a 508 Sensor 1 [e]
+/analysis/h1/setXaxis 160 "charge in strip a 508 Sensor 1 [e]"
+/analysis/h1/setYaxis 160 "number of entries per bin"
+/analysis/h1/set 161 1000 0 50000    #charge in strip a 509 Sensor 1 [e]
+/analysis/h1/setXaxis 161 "charge in strip a 509 Sensor 1 [e]"
+/analysis/h1/setYaxis 161 "number of entries per bin"
+/analysis/h1/set 162 1000 0 50000    #charge in strip a 510 Sensor 1 [e]
+/analysis/h1/setXaxis 162 "charge in strip a 510 Sensor 1 [e]"
+/analysis/h1/setYaxis 162 "number of entries per bin"
+/analysis/h1/set 163 1000 0 50000    #charge in strip a 511 Sensor 1 [e]
+/analysis/h1/setXaxis 163 "charge in strip a 511 Sensor 1 [e]"
+/analysis/h1/setYaxis 163 "number of entries per bin"
+/analysis/h1/set 164 1000 0 50000    #charge in strip a 512 Sensor 1 [e]
+/analysis/h1/setXaxis 164 "charge in strip a 512 Sensor 1 [e]"
+/analysis/h1/setYaxis 164 "number of entries per bin"
+/analysis/h1/set 165 1000 0 50000    #charge in strip b 505 Sensor 1 [e]
+/analysis/h1/setXaxis 165 "charge in strip b 505 Sensor 1 [e]"
+/analysis/h1/setYaxis 165 "number of entries per bin"
+/analysis/h1/set 166 1000 0 50000    #charge in strip b 506 Sensor 1 [e]
+/analysis/h1/setXaxis 166 "charge in strip b 506 Sensor 1 [e]"
+/analysis/h1/setYaxis 166 "number of entries per bin"
+/analysis/h1/set 167 1000 0 50000    #charge in strip b 507 Sensor 1 [e]
+/analysis/h1/setXaxis 167 "charge in strip b 507 Sensor 1 [e]"
+/analysis/h1/setYaxis 167 "number of entries per bin"
+/analysis/h1/set 168 1000 0 50000    #charge in strip b 508 Sensor 1 [e]
+/analysis/h1/setXaxis 168 "charge in strip b 508 Sensor 1 [e]"
+/analysis/h1/setYaxis 168 "number of entries per bin"
+/analysis/h1/set 169 1000 0 50000    #charge in strip b 509 Sensor 1 [e]
+/analysis/h1/setXaxis 169 "charge in strip b 509 Sensor 1 [e]"
+/analysis/h1/setYaxis 169 "number of entries per bin"
+/analysis/h1/set 170 1000 0 50000    #charge in strip b 510 Sensor 1 [e]
+/analysis/h1/setXaxis 170 "charge in strip b 510 Sensor 1 [e]"
+/analysis/h1/setYaxis 170 "number of entries per bin"
+/analysis/h1/set 171 1000 0 50000    #charge in strip b 511 Sensor 1 [e]
+/analysis/h1/setXaxis 171 "charge in strip b 511 Sensor 1 [e]"
+/analysis/h1/setYaxis 171 "number of entries per bin"
+/analysis/h1/set 172 1000 0 50000    #charge in strip b 512 Sensor 1 [e]
+/analysis/h1/setXaxis 172 "charge in strip b 512 Sensor 1 [e]"
+/analysis/h1/setYaxis 172 "number of entries per bin"
+/analysis/h1/set 173 1000 0 50000    #charge in strip a 505 Sensor 2 [e]
+/analysis/h1/setXaxis 173 "charge in strip a 505 Sensor 2 [e]"
+/analysis/h1/setYaxis 173 "number of entries per bin"
+/analysis/h1/set 174 1000 0 50000    #charge in strip a 506 Sensor 2 [e]
+/analysis/h1/setXaxis 174 "charge in strip a 506 Sensor 2 [e]"
+/analysis/h1/setYaxis 174 "number of entries per bin"
+/analysis/h1/set 175 1000 0 50000    #charge in strip a 507 Sensor 2 [e]
+/analysis/h1/setXaxis 175 "charge in strip a 507 Sensor 2 [e]"
+/analysis/h1/setYaxis 175 "number of entries per bin"
+/analysis/h1/set 176 1000 0 50000    #charge in strip a 508 Sensor 2 [e]
+/analysis/h1/setXaxis 176 "charge in strip a 508 Sensor 2 [e]"
+/analysis/h1/setYaxis 176 "number of entries per bin"
+/analysis/h1/set 177 1000 0 50000    #charge in strip a 509 Sensor 2 [e]
+/analysis/h1/setXaxis 177 "charge in strip a 509 Sensor 2 [e]"
+/analysis/h1/setYaxis 177 "number of entries per bin"
+/analysis/h1/set 178 1000 0 50000    #charge in strip a 510 Sensor 2 [e]
+/analysis/h1/setXaxis 178 "charge in strip a 510 Sensor 2 [e]"
+/analysis/h1/setYaxis 178 "number of entries per bin"
+/analysis/h1/set 179 1000 0 50000    #charge in strip a 511 Sensor 2 [e]
+/analysis/h1/setXaxis 179 "charge in strip a 511 Sensor 2 [e]"
+/analysis/h1/setYaxis 179 "number of entries per bin"
+/analysis/h1/set 180 1000 0 50000    #charge in strip a 512 Sensor 2 [e]
+/analysis/h1/setXaxis 180 "charge in strip a 512 Sensor 2 [e]"
+/analysis/h1/setYaxis 180 "number of entries per bin"
+/analysis/h1/set 181 1000 0 50000    #charge in strip b 505 Sensor 2 [e]
+/analysis/h1/setXaxis 181 "charge in strip b 505 Sensor 2 [e]"
+/analysis/h1/setYaxis 181 "number of entries per bin"
+/analysis/h1/set 182 1000 0 50000    #charge in strip b 506 Sensor 2 [e]
+/analysis/h1/setXaxis 182 "charge in strip b 506 Sensor 2 [e]"
+/analysis/h1/setYaxis 182 "number of entries per bin"
+/analysis/h1/set 183 1000 0 50000    #charge in strip b 507 Sensor 2 [e]
+/analysis/h1/setXaxis 183 "charge in strip b 507 Sensor 2 [e]"
+/analysis/h1/setYaxis 183 "number of entries per bin"
+/analysis/h1/set 184 1000 0 50000    #charge in strip b 508 Sensor 2 [e]
+/analysis/h1/setXaxis 184 "charge in strip b 508 Sensor 2 [e]"
+/analysis/h1/setYaxis 184 "number of entries per bin"
+/analysis/h1/set 185 1000 0 50000    #charge in strip b 509 Sensor 2 [e]
+/analysis/h1/setXaxis 185 "charge in strip b 509 Sensor 2 [e]"
+/analysis/h1/setYaxis 185 "number of entries per bin"
+/analysis/h1/set 186 1000 0 50000    #charge in strip b 510 Sensor 2 [e]
+/analysis/h1/setXaxis 186 "charge in strip b 510 Sensor 2 [e]"
+/analysis/h1/setYaxis 186 "number of entries per bin"
+/analysis/h1/set 187 1000 0 50000    #charge in strip b 511 Sensor 2 [e]
+/analysis/h1/setXaxis 187 "charge in strip b 511 Sensor 2 [e]"
+/analysis/h1/setYaxis 187 "number of entries per bin"
+/analysis/h1/set 188 1000 0 50000    #charge in strip b 512 Sensor 2 [e]
+/analysis/h1/setXaxis 188 "charge in strip b 512 Sensor 2 [e]"
+/analysis/h1/setYaxis 188 "number of entries per bin"
+
+/analysis/h1/set 189 50 0 5    #hit multiplicity per event: Sensor 1
+/analysis/h1/setXaxis 189 "hit multiplicity per event: Sensor 1"
+/analysis/h1/setYaxis 189 "number of entries per bin"
+/analysis/h1/set 190 50 0 5    #hit multiplicity per event: Sensor 2
+/analysis/h1/setXaxis 190 "hit multiplicity per event: Sensor 2"
+/analysis/h1/setYaxis 190 "number of entries per bin"
+
+/analysis/h1/set 191 600 -4 2 cm     #average x-position of primary in sensor 1
+/analysis/h1/setXaxis 191 "average x-position of primary in sensor 1 (cm)"
+/analysis/h1/setYaxis 191 "number of entries per bin"
+/analysis/h1/set 192 600 -3 3 cm     #average y-position of primary in sensor 1
+/analysis/h1/setXaxis 192 "average y-position of primary in sensor 1 (cm)"
+/analysis/h1/setYaxis 192 "number of entries per bin"
+/analysis/h1/set 193 600 -3 3 cm     #average z-position of primary in sensor 1
+/analysis/h1/setXaxis 193 "average z-position of primary in sensor 1 (cm)"
+/analysis/h1/setYaxis 193 "number of entries per bin"
+
+/analysis/h1/set 194 600 -4 2 cm     #average x-position of primary in sensor 2
+/analysis/h1/setXaxis 194 "average x-position of primary in sensor 2 (cm)"
+/analysis/h1/setYaxis 194 "number of entries per bin"
+/analysis/h1/set 195 600 -3 3 cm     #average y-position of primary in sensor 2
+/analysis/h1/setXaxis 195 "average y-position of primary in sensor 2 (cm)"
+/analysis/h1/setYaxis 195 "number of entries per bin"
+/analysis/h1/set 196 600 -3 3 cm     #average z-position of primary in sensor 2
+/analysis/h1/setXaxis 196 "average z-position of primary in sensor 2 (cm)"
+/analysis/h1/setYaxis 196 "number of entries per bin"
+
+/analysis/h1/set 197 100 0 10    #hit multiplicity per event: BPIX module 1
+/analysis/h1/setXaxis 197 "hit multiplicity per event: BPIX module 1"
+/analysis/h1/setYaxis 197 "number of entries per bin"
+/analysis/h1/set 198 100 0 10    #hit multiplicity per event: BPIX module 2
+/analysis/h1/setXaxis 198 "hit multiplicity per event: BPIX module 2"
+/analysis/h1/setYaxis 198 "number of entries per bin"
+
+#/analysis/h3/setX 85 10000 -2 2 cm 
+#/analysis/h3/setY 85 10000 -2 2 cm    #midpoint of primary particle inside Pixel Detector 1
+#/analysis/h3/setX 86 1000 -2 2 mm
+#/analysis/h3/setY 86 1000 -2 2 mm 
+#/analysis/h3/setY 86 1000 -2 2 mm     #midpoint of primary particle inside Strip Detector 1
+#/analysis/h3/setX 87 1000 -2 2 mm
+#/analysis/h3/setY 87 1000 -2 2 mm 
+#/analysis/h3/setY 87 1000 -2 2 mm     #midpoint of primary particle inside Strip Detector 2
+#/analysis/h3/setX 88 10000 -2 2 cm
+#/analysis/h3/setY 88 10000 -2 2 cm 
+#/analysis/h3/setY 88 10000 -2 2 cm    #midpoint of primary particle inside Pixel Detector 2
+
+
+
+#
+/run/printProgress 10000
+#
+/run/beamOn 10000
+/vis/reviewKeptEvents

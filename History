@@ -1,0 +1,51 @@
+Version 1 was the primary version with a few errors.
+
+1/2/2018 Version 2: Changed the number of bins, minimum and maximum limits of histogram in proton.mac.
+
+1/2/2018 Version 3: Changed the type of fNbElectronsStrip1, fNbElectronsStrip2 in RunAction.hh from G4double to G4int.
+
+22/2/2018 Version 4: Added two couples of BPIX modules (one in front of and one behind the DUT). Calculating the entrance point of the primary proton inside Pixel Detector 1 and its exit point from Pixel Detector 2.
+
+23/2/2018 Version 5: Decreased the thickness of pixel modules. Calculating the deflection angle of the primary track between the two pixel modules and filling with it histogram 84.
+
+1/3/2018 Version 6: Local electric field added to each strip sensor. Global electric field could be added through ElectricFieldSetup.
+
+7/3/2018 Version 7: Positions of primary inside strip sensors 1 and 2 displayed.
+
+9/3/2018 Version 8: Midpoints of primary inside each detector displayed.
+
+13/3/2018 Version 9: Let A = fPointPix1mid, B = fPointDet1mid, C = fPointDet2mid, D = fPointPix2mid. Let dB = distance between B and AD and dC = distance between C and AD. Histograms filled with dB and dC for each event.
+
+13/3/2018 Version 10: Let B' be the AD point with same z as B. Let C' be the AD point with the same z as C. Histograms filled with B'Bx, B'By, C'Cx, C'Cy for each event.
+
+13/3/2018 Version 11: Bug in filling the histograms per strip fixed.
+
+15/3/2018 Version 12: World material changed to air.
+
+20/3/2018 Version 13: Kinetic energy of secondaries calculated and could be printed out.
+
+Versions 14 and 15 were non-working and full of bugs.
+
+11/4/2018 Version 16: Possibility for 2S DUT rotation about the x-axis added.
+
+11/4/2018 Version 17: Strips a and b for each sensor separated.
+
+12/4/2018 Version 18: Changed "Air" material. Added CO2 and ArgonGas to it.
+
+3/5/2018 Version 19: Changed titles of histograms 119-122.
+
+Version 20 was the same as Version 19, but with different numbers of bins, min and max values in histograms.
+
+25/5/2018 Version 21: Histograms and ntuples filled with number of hits per strip. We consider that when the deposited energy in the volume of a strip exceeds 5000 X 3.67 eV [5000 e = signal threshold for a valid hit, 3.67 eV = energy needed for the production of an electron-hole pair], then we have a hit.
+
+21/6/2018 Version 22: Hit multiplicity redefined (per event). Scintillator added. Pixel layer added to pixel detectors.
+
+25/6/2018 Version 22: Calculation of x- and y-coordinates of impact points.
+
+Version 23 was a trial version to find the mistake in the rotation matrix of the DUT.
+
+29/6/2018 Version 24: Calculation of z-coordinates of impact points.
+
+8/7/2018 Version 25: Attempt to calculate stored energy inside each pixel-volume.
+
+12/7/2018 Version 26: Calculation of number of hits per pixel module.

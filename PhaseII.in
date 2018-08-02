@@ -1,0 +1,114 @@
+# $Id: proton.mac 26-1-2018 pasenov
+#
+# macro file for PhaseII.cc
+#
+/control/verbose 2
+/run/verbose 2
+#
+/testem/det/setMatD Silicon
+/testem/det/setSizeZ1 320 um
+/testem/det/setSizeZ2 320 um
+#
+/run/setCut 1 um
+#
+#/process/eLoss/CSDARange true
+#
+/run/initialize
+#
+/gun/particle proton 
+/gun/energy 25 MeV
+#
+/analysis/setFileName proton
+# 
+/analysis/h1/set 1 10000 0 10 MeV    #continuous eLoss for Detector 1
+/analysis/h1/set 2 10000 0 10 MeV    #continuous eLoss for Detector 2
+/analysis/h1/set 3 10000 0 10 MeV   #secondary  eLoss for Detector 1
+/analysis/h1/set 4 10000 0 10 MeV   #secondary  eLoss for Detector 2
+/analysis/h1/set 5 1000 0 100 keV   #tertiary  eLoss for Detector 1
+/analysis/h1/set 6 1000 0 100 keV   #tertiary  eLoss for Detector 2
+/analysis/h1/set 7 10000 0 10 MeV    #total eLoss for Detector 1
+/analysis/h1/set 8 10000 0 10 MeV    #total eLoss for Detector 2
+/analysis/h1/set 9 10000 0 100 keV    #secondary e- energy spectrum for Detector 1
+/analysis/h1/set 10 10000 0 100 keV    #secondary e- energy spectrum for Detector 2
+/analysis/h1/set 11 10000 0 100 keV    #secondary gamma energy spectrum for Detector 1
+/analysis/h1/set 12 10000 0 100 keV   #secondary gamma energy spectrum for Detector 2
+/analysis/h1/set 13 1000 0 100 keV   #tertiary e- energy spectrum for Detector 1
+/analysis/h1/set 14 1000 0 100 keV   #tertiary e- energy spectrum for Detector 2
+/analysis/h1/set 15 1000 0 100 keV   #tertiary gamma energy spectrum for Detector 1
+/analysis/h1/set 16 1000 0 100 keV   #tertiary gamma energy spectrum for Detector 2
+/analysis/h1/set 17 1000 0 0.05 mm	    #step size for primary
+/analysis/h1/set 18 1000 0 0.02 mm    #step size for secondaries
+/analysis/h1/set 19 1000 0 0.02 mm    #step size for tertiaries
+/analysis/h1/set 20 1000 0 0.02 mm    #step size for secondaries created in detectors
+/analysis/h1/set 21 100 -1.5 1.5    #x-polarization for secondaries
+/analysis/h1/set 22 100 -1.5 1.5    #y-polarization for secondaries
+/analysis/h1/set 23 100 -1.5 1.5    #z-polarization for secondaries
+/analysis/h1/set 24 100 -1.5 1.5    #x-polarization for tertiaries
+/analysis/h1/set 25 100 -1.5 1.5    #y-polarization for tertiaries
+/analysis/h1/set 26 100 -1.5 1.5    #z-polarization for tertiaries
+/analysis/h1/set 27 100 0 15 cm	    #track length for primary
+/analysis/h1/set 28 100 0 15 mm    #total track length of secondaries
+/analysis/h1/set 29 100 0 3 mm     #total track length of tertiaries
+/analysis/h1/set 30 100 0 10 mm    #total track length of secondaries created in detectors
+/analysis/h1/set 31 100 0 0.1 mm    #track length of secondaries created in detectors
+/analysis/h1/set 32 100 0 100000    #number of positrons created in Detector 1
+/analysis/h1/set 33 100 0 100000    #number of positrons created in Detector 2
+/analysis/h1/set 34 100 0 100000    #number of electrons created in Detector 1
+/analysis/h1/set 35 100 0 100000    #number of electrons created in Detector 1
+/analysis/h1/set 36 100 0 100000    #number of pi+ created in Detector 1
+/analysis/h1/set 37 100 0 100000    #number of pi+ created in Detector 2
+/analysis/h1/set 38 100 0 100000    #number of pi- created in Detector 1
+/analysis/h1/set 39 100 0 100000    #number of pi- created in Detector 2
+/analysis/h1/set 40 100 0 100000    #number of mu+ created in Detector 1
+/analysis/h1/set 41 100 0 100000    #number of mu+ created in Detector 2
+/analysis/h1/set 42 100 0 100000    #number of mu- created in Detector 1
+/analysis/h1/set 43 100 0 100000    #number of mu- created in Detector 2
+/analysis/h1/set 44 100 0 100000    #number of delta e- created in Detector 1 that have reached Detector 2
+/analysis/h1/set 45 100 0 100000    #number of delta e- created in Detector 2 that have reached Detector 1
+/analysis/h1/set 46 100 0 100000    #number of positrons created before Detector 1
+/analysis/h1/set 47 100 0 100000    #number of electrons created before Detector 1
+/analysis/h1/set 48 100 0 100000    #number of positrons created between Detector 1 and Detector 2
+/analysis/h1/set 49 100 0 100000    #number of electrons created between Detector 1 and Detector 2
+/analysis/h1/set 50 100 0 100000    #number of positrons created after Detector 2
+/analysis/h1/set 51 100 0 100000    #number of electrons created after Detector 2
+/analysis/h1/set 52 10000 0 5 MeV    #continuous eLoss for strips a, b 505 Detector 1
+/analysis/h1/set 53 10000 0 5 MeV    #continuous eLoss for strips a, b 506 Detector 1
+/analysis/h1/set 54 10000 0 5 MeV    #continuous eLoss for strips a, b 507 Detector 1
+/analysis/h1/set 55 10000 0 5 MeV    #continuous eLoss for strips a, b 508 Detector 1
+/analysis/h1/set 56 10000 0 5 MeV    #continuous eLoss for strips a, b 509 Detector 1
+/analysis/h1/set 57 10000 0 5 MeV    #continuous eLoss for strips a, b 510 Detector 1
+/analysis/h1/set 58 10000 0 5 MeV    #continuous eLoss for strips a, b 511 Detector 1
+/analysis/h1/set 59 10000 0 5 MeV    #continuous eLoss for strips a, b 512 Detector 1
+/analysis/h1/set 60 10000 0 5 MeV    #continuous eLoss for strips a, b 505 Detector 2
+/analysis/h1/set 61 10000 0 5 MeV    #continuous eLoss for strips a, b 506 Detector 2
+/analysis/h1/set 62 10000 0 5 MeV    #continuous eLoss for strips a, b 507 Detector 2
+/analysis/h1/set 63 10000 0 5 MeV    #continuous eLoss for strips a, b 508 Detector 2
+/analysis/h1/set 64 10000 0 5 MeV    #continuous eLoss for strips a, b 509 Detector 2
+/analysis/h1/set 65 10000 0 5 MeV    #continuous eLoss for strips a, b 510 Detector 2
+/analysis/h1/set 66 10000 0 5 MeV    #continuous eLoss for strips a, b 511 Detector 2
+/analysis/h1/set 67 10000 0 5 MeV    #continuous eLoss for strips a, b 512 Detector 2
+/analysis/h1/set 68 100 0 10000000    #number of electrons created in strips a, b 505 Detector 1
+/analysis/h1/set 69 100 0 10000000    #number of electrons created in strips a, b 506 Detector 1
+/analysis/h1/set 70 100 0 10000000    #number of electrons created in strips a, b 507 Detector 1
+/analysis/h1/set 71 100 0 10000000    #number of electrons created in strips a, b 508 Detector 1
+/analysis/h1/set 72 100 0 10000000    #number of electrons created in strips a, b 509 Detector 1
+/analysis/h1/set 73 100 0 10000000    #number of electrons created in strips a, b 510 Detector 1
+/analysis/h1/set 74 100 0 10000000    #number of electrons created in strips a, b 511 Detector 1
+/analysis/h1/set 75 100 0 10000000    #number of electrons created in strips a, b 512 Detector 1
+/analysis/h1/set 76 100 0 10000000    #number of electrons created in strips a, b 505 Detector 2
+/analysis/h1/set 77 100 0 10000000    #number of electrons created in strips a, b 506 Detector 2
+/analysis/h1/set 78 100 0 10000000    #number of electrons created in strips a, b 507 Detector 2
+/analysis/h1/set 79 100 0 10000000    #number of electrons created in strips a, b 508 Detector 2
+/analysis/h1/set 80 100 0 10000000    #number of electrons created in strips a, b 509 Detector 2
+/analysis/h1/set 81 100 0 10000000    #number of electrons created in strips a, b 510 Detector 2
+/analysis/h1/set 82 100 0 10000000    #number of electrons created in strips a, b 511 Detector 2
+/analysis/h1/set 83 100 0 10000000    #number of electrons created in strips a, b 512 Detector 2
+/analysis/h1/set 84 1000 0 2           #deflection angle of primary particle
+
+
+
+#
+/run/printProgress 100000
+#
+/run/beamOn 100
+/vis/reviewKeptEvents
